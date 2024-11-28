@@ -10,10 +10,11 @@ body {
     width: 100%; /* Assure que le body prend toute la largeur */
     min-width: 100%; /* Empêche les débordements ou les marges non voulues */
 }
-h1
-{
+
+h1 {
     padding-top: 10px;
 }
+
 p {
     margin: 50px auto;
 }
@@ -125,14 +126,11 @@ img {
         font-size: 25px;
     }
 
-   
-
     .container-text {
         padding: 10px;
     }
 
     .trois-boutons {
-        
         display: flex;
         flex-direction: row; /* Change à une colonne pour un affichage vertical */
         justify-content: center;
@@ -150,10 +148,10 @@ img {
     img {
         padding: 5px;
     }
+
     .menu-item {
         display: flex;
         justify-content: center;
         margin: auto 5px;
-
     }
-
+}
