@@ -21,7 +21,8 @@ p {
 .choix-text {
     font-size: large;
 }
-
+.p-credit {
+    text-align: center;
 .container-text {
     display: flex;
     flex-direction: column;
