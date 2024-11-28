@@ -17,14 +17,20 @@
 
 <div class="boutons">
     <div class="trois-boutons">
-        <a class="menu-item" onclick="clickChoice('pierre')"><img src="img/poing.png" alt=""></a>
-        <a class="menu-item" onclick="clickChoice('feuille')"><img src="img/main.png" alt=""></a>
-        <a class="menu-item" onclick="clickChoice('ciseaux')"><img src="img/ciseaux.png" alt=""></a>
+        <!-- Utilisation des attributs alt pour l'accessibilité et rôle button -->
+        <a class="menu-item" onclick="clickChoice('pierre')" role="button" aria-label="Choisir Pierre">
+            <img src="img/poing.png" alt="Image de Pierre">
+        </a>
+        <a class="menu-item" onclick="clickChoice('feuille')" role="button" aria-label="Choisir Feuille">
+            <img src="img/main.png" alt="Image de Feuille">
+        </a>
+        <a class="menu-item" onclick="clickChoice('ciseaux')" role="button" aria-label="Choisir Ciseaux">
+            <img src="img/ciseaux.png" alt="Image de Ciseaux">
+        </a>
     </div>
     <div class="reset">
         <button class="menu-item-reset" onclick="resetScore()">Réinitialiser les scores</button>
     </div>
-    
 </div>
 
 <!-- Encart explicatif -->
@@ -52,13 +58,16 @@
         } else {
             défaite += 1; 
         }
-        result = `Égalités : ${draw}, Victoires : ${victoire}, Défaites : ${défaite}`;
+
+        // Mise à jour dynamique des scores dans le DOM
+        document.querySelector('.js-score').innerHTML = `Égalités : ${draw}, Victoires : ${victoire}, Défaites : ${défaite}`;
     }
 
     function resetScore() {
         draw = 0;
         victoire = 0;
         défaite = 0;
+        // Réinitialisation des scores affichés
         document.querySelector('.js-score').innerHTML = `Égalités : ${draw}, Victoires : ${victoire}, Défaites : ${défaite}`;
     }
 
@@ -74,9 +83,11 @@
                 ? 'Vous avez gagné'
                 : 'Vous avez perdu';
 
+        // Mise à jour du texte du choix et du résultat dans le DOM
         document.querySelector('.choix-text').innerHTML = `Vous avez choisi ${playerMove}, votre adversaire a choisi ${computerMove}. ${result}`;
+        
+        // Appel à la fonction pour mettre à jour les scores
         score(result);
-        document.querySelector('.js-score').innerHTML = `Égalités : ${draw}, Victoires : ${victoire}, Défaites : ${défaite}`;
     }
 </script>
 
