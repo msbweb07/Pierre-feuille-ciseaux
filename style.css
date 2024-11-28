@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: rgb(0, 0, 0);
+    width: 100%; /* Assure que le body prend toute la largeur */
+    min-width: 100%; /* Empêche les débordements ou les marges non voulues */
+}
+h1
+{
+    padding-top: 10px;
+}
+p {
+    margin: 50px auto;
+}
+
+.choix-text {
+    font-size: large;
+}
+
+.container-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 100%; /* Assure que ce conteneur prend toute la largeur */
+}
+
+.trois-boutons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%; /* Change de 'max-width' à 'width' pour prendre toute la largeur */
+    flex-wrap: wrap; /* Permet aux éléments de se réorganiser en ligne sur petits écrans */
+}
+
+.menu-item {
+    margin-top: 100px;
+    display: block;
+    margin: auto 25px;
+}
+
+img {
+    width: 300px;
+    max-width: 100%;
+    border: solid 2px white;
+    border-radius: 25px;
+    padding: 25px;
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.menu-item-reset {
+    background: white;
+    border: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: large;
+    cursor: pointer;
+}
+
+.project-info {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: center;
+    color: #333;
+}
+
+.project-info h2 {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.project-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-info li {
+    margin: 5px 0;
+}
+
+/* MEDIA QUERIES POUR LES PETITS ÉCRANS */
+
+@media (max-width: 1100px) {
+    .trois-boutons {
+        flex-direction: row; /* Les boutons s'empilent sur mobile */
+        align-items: center;
+        width: 100%; /* Prend toute la largeur de l'écran */
+    }
+
+    img {
+        width: 150px; /* Réduit la taille des images sur les petits écrans */
+    }
+
+    .reset {
+        padding: 30px;
+    }
+
+    .menu-item-reset {
+        padding: 8px 16px;
+        font-size: medium;
+    }
+}
+
+@media (max-width: 640px) {
+    h1 {
+        text-align: center;
+        margin: 10px auto 20px auto;
+        font-size: 25px;
+    }
+
+   
+
+    .container-text {
+        padding: 10px;
+    }
+
+    .trois-boutons {
+        
+        display: flex;
+        flex-direction: row; /* Change à une colonne pour un affichage vertical */
+        justify-content: center;
+        width: 100%; /* Prend toute la largeur de l'écran */
+        flex-wrap: nowrap;
+        padding: 0 0;
+    }
+
+    .menu-item-reset {
+        font-size: small;
+        padding: 6px 12px;
+        margin: auto;
+    }
+
+    img {
+        padding: 5px;
+    }
+    .menu-item {
+        display: flex;
+        justify-content: center;
+        margin: auto 5px;
+
+    }
+}
